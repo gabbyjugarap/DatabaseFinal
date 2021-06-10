@@ -1,0 +1,11 @@
+SELECT * FROM owner;
+SELECT * FROM owner WHERE firstName="Bell";
+SELECT * FROM owner WHERE firstName LIKE 'a%';
+SELECT * FROM owner WHERE phoneNumber>' ';
+SELECT * FROM owner WHERE phoneNumber=' ';
+SELECT * FROM pet WHERE ownerID=01;
+
+SELECT * FROM pet WHERE ownerID=01 OR ownerID=02;
+SELECT * FROM pet , owner WHERE pet.ownerID=owner.ownerID AND firstName='Artoria' OR pet.ownerID=owner.ownerID AND firstName='Bell';
+
+SELECT * FROM pet , owner WHERE pet.ownername=owner.firstName AND firstName LIKE '%a%';
