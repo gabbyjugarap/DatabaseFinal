@@ -1,0 +1,25 @@
+Create a database that relates owners and pets. Each owner has two or more pets. 
+
+An owner must have a first name, last name, address, and phone number.
+
+A pet should have a name, category (dog, cat, etc), breed, age, and be associated to an owner (think foreign keys).
+
+1. Insert 5 records for owners, with each name beginning with a new letter of the alphabet.
+
+2. Write a query to select all owners from the database.
+
+3. Add more specificity to the query above by searching for a specific name.
+
+4. Write a query that retrieves all owners with names starting with a letter of your choice.
+
+5. Insert an owner without a phone number.
+
+6. Write a query that first shows all owners that HAVE phone numbers; then write a second query to show all owners that do NOT have phone numbers listed.
+
+7. Add at least 2 pet records per owner to the pets table. Make sure to set up your association using foreign keys appropriately.
+
+8. Write a query to retrieve all pets for the first owner.
+
+9. Write a second query to retrieve all pets for the first OR the second owner. Try this by specifying the foreign keys explicitly, and then try to create a subquery that retrieves the keys dynamically. (HARD- BONUS)
+
+10. For all owners who have the letter "A" in their names, retrieve all of their pets. (HARD - BONUS)
