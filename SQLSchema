@@ -1,0 +1,35 @@
+  CREATE TABLE owner(
+    ownerID int(2) NOT NULL,
+    firstName varchar(225) NOT NULL,
+    lastName varchar(225) NOT NULL,
+    address varchar(225) NOT NULL,
+    phoneNumber varchar(225),
+    PRIMARY KEY(ownerID)
+    );
+CREATE TABLE pet(
+  petID int(2) NOT NULL,
+  name varchar(225) NOT NULL,
+  category varchar(225) NOT NULL,
+  breed varchar(225) NOT NULL,
+  age int(3) NOT NULL,
+  ownerID int(2) NOT NULL,
+  ownername varchar(225) NOT NULL,
+  FOREIGN KEY(ownerID) REFERENCES owner(ownerID)
+  );
+    INSERT INTO owner
+    VALUES(01 , 'Artoria' , 'Pendragon' , '1543 Queens Court Way' , ' '),
+    (02 , 'Bell' , 'Cranel' , '24 Hestia Plaza' , ' '),
+    (03 , 'Caitlyn' , 'Peacekeeper' , '621 Piltover Lane' , '001-004-2011'),
+    (04 , 'Dante' , 'Sparda' , '66 Slum Avenue' , '010-016-2001'),
+    (05 , 'Eiko' , 'Sari' , '360 Madain Sari Street' , '011-12-2000');
+    INSERT INTO pet
+    VALUES(10 , 'Emiya' , 'dog' , 'shiba inu' , 7 , 01 , 'Artoria'),
+    (11 , 'Archer' , 'cat' , 'scottish fold' , 10 , 01 , 'Artoria'),
+    (12 , 'Hestia' , 'bird' , 'Moluccan Cockatoo' , 21 , 02 , 'Bell'),
+    (13 , 'Lily' , 'hamster' , 'Roborovski Dwarf' , 3 , 02 , 'Bell'),
+    (14 , 'Vi' , 'dog' , 'Rottweiler' , 6 , 03 , 'Caitlyn'),
+    (15 , 'Jinx' , 'cat' , 'Lykoi' , 3 , 03 , 'Caitlyn'),
+    (16 , 'Ebony' , 'dog' , 'Cane Corso' , 5 , 04 , 'Dante'),
+    (17 , 'Ivory' , 'dog' , 'Cane Corso' , 5 , 04 , 'Dante'),
+    (18 , 'Carbuncle' , 'Unknown' , 'Unknown' , 1000 , 05 , 'Eiko'),
+    (19 , 'Fenrir' , 'wolf' , 'dire wolf' , 2500 , 05 , 'Eiko');
